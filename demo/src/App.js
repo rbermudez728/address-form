@@ -19,6 +19,9 @@ import DefaultInput from '../../src/DefaultInput'
 import GoogleMapsContainer from '../../src/geolocation/GoogleMapsContainer'
 import GeolocationInput from '../../src/geolocation/GeolocationInput'
 import Map from '../../src/geolocation/Map'
+import 'react-select/dist/react-select.css'
+
+import MyInput from './MyInput'
 
 import { injectIntl, intlShape } from 'react-intl'
 
@@ -222,7 +225,7 @@ class App extends Component {
               </AutoCompletedFields>
 
               <AddressForm
-                Input={DefaultInput}
+                Input={MyInput}
                 address={address}
                 rules={selectedRules}
                 onChangeAddress={onChangeAddress}

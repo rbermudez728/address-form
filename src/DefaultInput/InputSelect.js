@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import AddressShapeWithValidation from '../propTypes/AddressShapeWithValidation'
-import map from 'lodash/map'
 import cx from 'classnames'
+import Select from 'react-select'
+import './InputSelect.css'
+import Media from 'react-media'
+import map from 'lodash/map'
 
 class InputSelect extends Component {
+  handleReactSelectChange = ({ value }) => {
+    this.props.onChange(value)
+  }
+
   handleChange = e => {
     this.props.onChange(e.target.value)
   }
@@ -20,32 +27,54 @@ class InputSelect extends Component {
     })
 
     return (
-      <select
-        name={field.name}
-        id={`ship-${field.name}`}
-        value={address[field.name].value || ''}
-        onChange={this.handleChange}
-        onBlur={this.props.onBlur}
-        disabled={disabled}
-        className={className}
-        ref={this.props.inputRef}
-      >
-        {field.optionsCaption !== null &&
-        field.optionsCaption !== undefined &&
-        field.optionsCaption === false
-          ? null
-          : <option
-            value=""
-            disabled={address[field.name].value ? true : undefined}
-            >
-            {field.optionsCaption}
-          </option>}
-        {map(options, ({ value, label }) =>
-          (<option key={value} value={value}>
-            {label}
-          </option>)
-        )}
-      </select>
+      <div>
+        <Media query="(max-width: 768px)">
+          {matches =>
+            matches
+              ? <select
+                name={field.name}
+                id={`ship-${field.name}`}
+                value={address[field.name].value || ''}
+                onChange={this.handleChange}
+                onBlur={this.props.onBlur}
+                disabled={disabled}
+                className={className}
+                ref={this.props.inputRef}
+                >
+                {field.optionsCaption !== null &&
+                  field.optionsCaption !== undefined &&
+                  field.optionsCaption === false
+                    ? null
+                    : <option
+                      value=""
+                      disabled={address[field.name].value ? true : undefined}
+                      >
+                      {field.optionsCaption}
+                    </option>}
+                {map(options, ({ value, label }) =>
+                    (<option key={value} value={value}>
+                      {label}
+                    </option>)
+                  )}
+              </select>
+              : <Select
+                autoBlur
+                openOnFocus
+                autosize={false}
+                name={field.name}
+                id={`ship-${field.name}`}
+                value={address[field.name].value || ''}
+                onChange={this.handleReactSelectChange}
+                onBlur={this.props.onBlur}
+                disabled={disabled}
+                className={className}
+                placeholder={field.optionsCaption}
+                ref={this.props.inputRef}
+                options={options}
+                clearable={false}
+                />}
+        </Media>
+      </div>
     )
   }
 }

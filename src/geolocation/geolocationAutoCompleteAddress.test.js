@@ -1,6 +1,7 @@
 import geolocationAutoCompleteAddress from './geolocationAutoCompleteAddress'
 import postalCodeGoogleAddress from './__mocks__/postalCodeGoogleAddress'
 import oneLevelGoogleAddress from './__mocks__/oneLevelGoogleAddress'
+import noNumberGoogleAddress from './__mocks__/noNumberGoogleAddress'
 import invalidFieldGoogleAddress from './__mocks__/invalidFieldGoogleAddress'
 import usePostalCode from '../country/__mocks__/usePostalCode'
 import useOneLevel from '../country/__mocks__/useOneLevel'

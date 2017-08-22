@@ -30,6 +30,7 @@ class CountrySelector extends Component {
       name: 'country',
       label: 'country',
       optionsCaption: false,
+      size: 'large',
     }
 
     return (
