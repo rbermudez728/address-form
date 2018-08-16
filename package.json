@@ -77,12 +77,14 @@
       "/node_modules/",
       "<rootDir>/es/",
       "<rootDir>/lib/",
-      "<rootDir>/umd/"
+      "<rootDir>/umd/",
+      "<rootDir>/react/"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/es/",
       "<rootDir>/lib/",
-      "<rootDir>/umd/"
+      "<rootDir>/umd/",
+      "<rootDir>/react/"
     ],
     "transformIgnorePatterns": [
       "[/\\\\]lib[/\\\\].+\\.(js|jsx)$",
