@@ -1,13 +1,12 @@
 .git/
 .vtex/
-/__mocks__/
+__mocks__/
+__snapshots__/
 node_modules/
 lib/
 demo/
 src/
 
-react/**/__mocks__/
-react/**/__snapshots__/
 react/**/*.test.js
 react/setupTests.js
 
