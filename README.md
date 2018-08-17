@@ -4,8 +4,22 @@
 
 ## Setup
 
+Through **NPM**:
+
 ```sh
 $ npm install @vtex/address-form
+```
+
+```js
+import AddressContainer from '@vtex/address-form/AddressContainer'
+```
+
+Through **vtex.io**:
+
+Add `vtex.address-form: 2.x` to your `manifest.json` dependencies
+
+```js
+import { AddressContainer } from 'vtex.address-form'
 ```
 
 ## API
@@ -120,13 +134,15 @@ The component will then instantiate a Context and provide such rules to any comp
 
 - **`children`**: The components which will be rendered inside this component and, therefore, receive the provided rules
 - **`country`**: The `Alpha3` string identifier for the country which rules are to be provided
-- **`fetch`**:Functionality for fetching the rule files. It **must** receive the function `{country => import('@vtex/address-form/lib/country/' + country)}` as its value
+- **`shouldUseIOFetching`**: Whether to use built-in dynamic file fetching for the rules. Should be used if the project is an IO app
+- **`fetch`**: Functionality for fetching the rule files. Outside of IO, it **must** receive the function `{country => import('@vtex/address-form/lib/country/' + country)}` as its value. In IO, this prop **must not** be set
 
 ```js
 AddressRules.propTypes = {
   children: PropTypes.any.isRequired,
   country: PropTypes.string.isRequired,
-  fetch: PropTypes.func.isRequired,
+  shouldUseIOFetching: PropTypes.bool,
+  fetch: PropTypes.func,
 }
 ```
 
@@ -374,7 +390,6 @@ AddressSubmitter.propTypes = {
   )}
 </AddressSubmitter>
 ```
-
 
 ## Geolocation Components
 
