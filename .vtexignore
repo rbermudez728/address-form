@@ -1,11 +1,11 @@
 .git/
 .vtex/
-__mocks__/
-__snapshots__/
 node_modules/
 lib/
 demo/
 src/
+**/__snapshots__/
+**/__mocks__/
 
 react/**/*.test.js
 react/setupTests.js
@@ -16,6 +16,7 @@ react/setupTests.js
 jest.transform.js
 nwb.config.js
 package-lock.json
+yarn.lock
 .travis.yml
 
 README.md
