@@ -6,7 +6,7 @@ import {
 } from '../validateAddress'
 import address from '../__mocks__/newAddress'
 import reduce from 'lodash/reduce'
-import usePostalCode from '../country/__mocks__/usePostalCode'
+import usePostalCode from '../__mocks__/country/usePostalCode'
 import {
   EEMPTY,
   EADDRESSTYPE,

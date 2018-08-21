@@ -1,9 +1,9 @@
 import React from 'react'
-import SelectLevel from './SelectLevel'
+import SelectLevel from '../../postalCodeFrom/SelectLevel'
 import { shallow, mount } from 'enzyme'
-import useThreeLevels from '../country/__mocks__/useThreeLevels'
-import address from '../__mocks__/newAddress'
-import MockInput from '../inputs/DefaultInput/__mocks__/Input'
+import useThreeLevels from '../../__mocks__/country/useThreeLevels'
+import address from '../../__mocks__/newAddress'
+import MockInput from '../../__mocks__/inputs/DefaultInput/Input'
 
 describe('SelectLevel', () => {
   it('render it right', () => {

@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import TwoLevels from './TwoLevels'
-import useTwoLevels from '../country/__mocks__/useTwoLevels'
-import address from '../__mocks__/newAddress'
-import MockInput from '../inputs/DefaultInput/__mocks__/Input'
+import TwoLevels from '../../postalCodeFrom/TwoLevels'
+import useTwoLevels from '../../__mocks__/country/useTwoLevels'
+import address from '../../__mocks__/newAddress'
+import MockInput from '../../__mocks__/inputs/DefaultInput/Input'
 
 describe('TwoLevels', () => {
   it('render it right', () => {

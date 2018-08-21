@@ -1,17 +1,17 @@
-import geolocationAutoCompleteAddress from './geolocationAutoCompleteAddress'
-import postalCodeGoogleAddress from './__mocks__/postalCodeGoogleAddress'
-import oneLevelGoogleAddress from './__mocks__/oneLevelGoogleAddress'
-import invalidFieldGoogleAddress from './__mocks__/invalidFieldGoogleAddress'
-import usePostalCode from '../country/__mocks__/usePostalCode'
-import useOneLevel from '../country/__mocks__/useOneLevel'
-import newAddress from '../__mocks__/newAddress'
+import geolocationAutoCompleteAddress from '../../geolocation/geolocationAutoCompleteAddress'
+import postalCodeGoogleAddress from '../../__mocks__/geolocation/postalCodeGoogleAddress'
+import oneLevelGoogleAddress from '../../__mocks__/geolocation/oneLevelGoogleAddress'
+import invalidFieldGoogleAddress from '../../__mocks__/geolocation/invalidFieldGoogleAddress'
+import usePostalCode from '../../__mocks__/country/usePostalCode'
+import useOneLevel from '../../__mocks__/country/useOneLevel'
+import newAddress from '../../__mocks__/newAddress'
 
 describe('Geolocation Auto Complete Address', () => {
   it('should transform a Google address to a Checkout address', () => {
     const address = geolocationAutoCompleteAddress(
       newAddress,
       postalCodeGoogleAddress,
-      usePostalCode
+      usePostalCode,
     )
 
     expect(address).toMatchSnapshot()
@@ -21,7 +21,7 @@ describe('Geolocation Auto Complete Address', () => {
     const address = geolocationAutoCompleteAddress(
       newAddress,
       oneLevelGoogleAddress,
-      useOneLevel
+      useOneLevel,
     )
 
     expect(address.postalCode.value).toBe('0000')
@@ -31,7 +31,7 @@ describe('Geolocation Auto Complete Address', () => {
     const address = geolocationAutoCompleteAddress(
       newAddress,
       invalidFieldGoogleAddress,
-      usePostalCode
+      usePostalCode,
     )
 
     expect(address.postalCode.valid).toBe(false)
@@ -51,7 +51,7 @@ describe('Geolocation Auto Complete Address', () => {
         receiverName: { value: receiverName },
       },
       postalCodeGoogleAddress,
-      usePostalCode
+      usePostalCode,
     )
 
     expect(address.addressId.value).toBe(addressId)
@@ -68,7 +68,7 @@ describe('Geolocation Auto Complete Address', () => {
         complement: { value: complement },
       },
       postalCodeGoogleAddress,
-      usePostalCode
+      usePostalCode,
     )
 
     expect(address.complement).toBeUndefined()

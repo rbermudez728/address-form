@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import AddressContainer from '../AddressContainer'
 import address from '../__mocks__/newAddress'
-import usePostalCode from '../country/__mocks__/usePostalCode'
+import usePostalCode from '../__mocks__/country/usePostalCode'
 import postalCodeAutoCompleteAddress from '../postalCodeAutoCompleteAddress'
 import PostalCodeGetter from '../PostalCodeGetter'
 

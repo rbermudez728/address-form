@@ -1,8 +1,8 @@
 import React from 'react'
-import GoogleMapsContainer from './GoogleMapsContainer'
+import GoogleMapsContainer from '../../geolocation/GoogleMapsContainer'
 import { shallow, mount } from 'enzyme'
 
-jest.mock('./googleMaps')
+jest.mock('../../geolocation/googleMaps')
 
 describe('GoogleMapsContainer', () => {
   const API_KEY = '123'
@@ -11,8 +11,10 @@ describe('GoogleMapsContainer', () => {
   it('should render without crashing', () => {
     shallow(
       <GoogleMapsContainer apiKey={API_KEY} locale={locale}>
-        {jest.fn(() => <div />)}
-      </GoogleMapsContainer>
+        {jest.fn(() => (
+          <div />
+        ))}
+      </GoogleMapsContainer>,
     )
   })
 
@@ -22,7 +24,7 @@ describe('GoogleMapsContainer', () => {
     shallow(
       <GoogleMapsContainer apiKey={API_KEY} locale={locale}>
         {mockChild}
-      </GoogleMapsContainer>
+      </GoogleMapsContainer>,
     )
 
     expect(mockChild).toHaveBeenCalledWith({ googleMaps: null, loading: true })
@@ -34,7 +36,7 @@ describe('GoogleMapsContainer', () => {
     mount(
       <GoogleMapsContainer apiKey={API_KEY} locale={locale}>
         {mockChild}
-      </GoogleMapsContainer>
+      </GoogleMapsContainer>,
     )
 
     process.nextTick(() => {
@@ -42,7 +44,7 @@ describe('GoogleMapsContainer', () => {
         expect.objectContaining({
           googleMaps: expect.any(Object),
           loading: false,
-        })
+        }),
       )
 
       done()

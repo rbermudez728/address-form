@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { shallow, mount } from 'enzyme'
-import SelectPostalCode from './SelectPostalCode'
-import useOneLevel from '../country/__mocks__/useOneLevel'
-import address from '../__mocks__/newAddress'
+import SelectPostalCode from '../../postalCodeFrom/SelectPostalCode'
+import useOneLevel from '../../__mocks__/country/useOneLevel'
+import address from '../../__mocks__/newAddress'
 import find from 'lodash/find'
 
 describe('SelectPostalCode', () => {
   const firstLevelName = useOneLevel.postalCodeLevels[0]
   const firstLevelField = find(
     useOneLevel.fields,
-    field => field.name === firstLevelName
+    field => field.name === firstLevelName,
   )
 
   class MockInput extends Component {
@@ -25,7 +25,7 @@ describe('SelectPostalCode', () => {
         address={address}
         rules={useOneLevel}
         onChangeAddress={jest.fn()}
-      />
+      />,
     )
 
     const props = wrapper.find('InputFieldContainer').props()
@@ -43,7 +43,7 @@ describe('SelectPostalCode', () => {
       ({ label, postalCode }) => ({
         value: `${label}___${postalCode}`,
         label: label,
-      })
+      }),
     )
 
     const wrapper = shallow(
@@ -52,7 +52,7 @@ describe('SelectPostalCode', () => {
         address={address}
         rules={useOneLevel}
         onChangeAddress={jest.fn()}
-      />
+      />,
     )
 
     const props = wrapper.find('InputFieldContainer').props()
@@ -76,7 +76,7 @@ describe('SelectPostalCode', () => {
         }}
         rules={useOneLevel}
         onChangeAddress={jest.fn()}
-      />
+      />,
     )
 
     const props = wrapper.find('InputFieldContainer').props()
@@ -103,7 +103,7 @@ describe('SelectPostalCode', () => {
         }}
         rules={useOneLevel}
         onChangeAddress={handleChange}
-      />
+      />,
     )
 
     expect(handleChange).toHaveBeenCalledWith({

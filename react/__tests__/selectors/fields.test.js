@@ -9,9 +9,9 @@ import {
 } from '../../selectors/fields'
 import { ONE_LEVEL, TWO_LEVELS, POSTAL_CODE } from '../../constants'
 import diff from 'lodash/difference'
-import useOneLevel from '../../country/__mocks__/useOneLevel'
-import useTwoLevels from '../../country/__mocks__/useTwoLevels'
-import useThreeLevels from '../../country/__mocks__/useThreeLevels'
+import useOneLevel from '../../__mocks__/country/useOneLevel'
+import useTwoLevels from '../../__mocks__/country/useTwoLevels'
+import useThreeLevels from '../../__mocks__/country/useThreeLevels'
 
 describe('Field Selectors', () => {
   it('getField()', () => {

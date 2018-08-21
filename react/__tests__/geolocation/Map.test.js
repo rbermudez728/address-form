@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import Map from './Map'
+import Map from '../../geolocation/Map'
 
 describe('Map', () => {
   let shallowWrapper, shallowInstance

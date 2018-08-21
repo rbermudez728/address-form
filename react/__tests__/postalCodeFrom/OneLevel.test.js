@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import OneLevel from './OneLevel'
-import useOneLevel from '../country/__mocks__/useOneLevel'
-import address from '../__mocks__/newAddress'
-import MockInput from '../inputs/DefaultInput/__mocks__/Input'
+import OneLevel from '../../postalCodeFrom/OneLevel'
+import useOneLevel from '../../__mocks__/country/useOneLevel'
+import address from '../../__mocks__/newAddress'
+import MockInput from '../../__mocks__/inputs/DefaultInput/Input'
 
 describe('OneLevel', () => {
   it('render it right', () => {

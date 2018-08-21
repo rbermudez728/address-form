@@ -13,7 +13,7 @@ describe('googleMaps', () => {
 
   jest.mock('load-google-maps-api', () => mockLoad)
 
-  const loadGoogleMaps = require('./googleMaps').default
+  const loadGoogleMaps = require('../../geolocation/googleMaps').default
 
   const locale = 'pt'
   const API_KEY = '123'

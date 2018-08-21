@@ -4,7 +4,7 @@ import {
   getOneLevel,
   getTwoLevels,
   getThreeLevels,
-} from '../../transforms/addressFieldsOptions.js'
+} from '../../transforms/addressFieldsOptions'
 
 const countryData = {
   Beni: {

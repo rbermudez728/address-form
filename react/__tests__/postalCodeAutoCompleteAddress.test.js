@@ -1,6 +1,6 @@
 import postalCodeAutoCompleteAddress from '../postalCodeAutoCompleteAddress'
 import newAddress from '../__mocks__/newAddress'
-import usePostalCode from '../country/__mocks__/usePostalCode'
+import usePostalCode from '../__mocks__/country/usePostalCode'
 
 jest.mock('../transforms/address')
 jest.mock('../postalCodeService')
