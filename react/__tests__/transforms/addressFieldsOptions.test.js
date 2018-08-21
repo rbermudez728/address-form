@@ -2,7 +2,7 @@ import {
   getOneLevel,
   getTwoLevels,
   getThreeLevels,
-} from './addressFieldsOptions.js'
+} from '../../transforms/addressFieldsOptions.js'
 
 describe('Transform Address Fields Options', () => {
   it('should get one level', () => {

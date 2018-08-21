@@ -1,4 +1,4 @@
-import CountryType from './CountryType'
+import CountryType from '../../propTypes/CountryType'
 
 test('failing prop', () => {
   const result = CountryType({ country: 'MORE' }, 'country', 'Component')

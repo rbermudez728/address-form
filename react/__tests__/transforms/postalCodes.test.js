@@ -2,7 +2,7 @@ import {
   firstLevelPostalCodes,
   secondLevelPostalCodes,
   thirdLevelPostalCodes,
-} from './postalCodes'
+} from '../../transforms/postalCodes'
 
 describe('Postal Code Transforms', () => {
   it('should transform state postal codes', () => {

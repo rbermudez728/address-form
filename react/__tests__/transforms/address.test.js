@@ -6,9 +6,9 @@ import {
   handleMultipleValues,
   maskFields,
   addFocusToNextInvalidField,
-} from './address'
-import address from '../__mocks__/newAddress'
-import addressWithoutValidation from '../__mocks__/addressWithoutValidation'
+} from '../../transforms/address'
+import address from '../../__mocks__/newAddress'
+import addressWithoutValidation from '../../__mocks__/addressWithoutValidation'
 
 describe('Address Transform', () => {
   it('should add validation object to fields', () => {
