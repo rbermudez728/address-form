@@ -6,9 +6,7 @@ demo/
 src/
 **/__snapshots__/
 **/__mocks__/
-
-react/**/*.test.js
-react/setupTests.js
+**/__tests__/
 
 .prettierrc
 .eslintrc
