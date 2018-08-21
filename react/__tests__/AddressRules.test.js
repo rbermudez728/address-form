@@ -1,15 +1,15 @@
 import React from 'react'
-import AddressRules from './AddressRules'
+import AddressRules from '../AddressRules'
 import { shallow } from 'enzyme'
-import defaultRules from './country/default'
-import braRules from './country/BRA'
+import defaultRules from '../country/default'
+import braRules from '../country/BRA'
 
 describe('AddressRules', () => {
   it('should load the defined rules', async () => {
     const instance = shallow(
       <AddressRules
         country={'BRA'}
-        fetch={country => import('./country/' + country)}
+        fetch={country => import('../country/' + country)}
       >
         <h1>It works!</h1>
       </AddressRules>,
@@ -23,7 +23,7 @@ describe('AddressRules', () => {
     const wrapper = shallow(
       <AddressRules
         country={'BRA'}
-        fetch={country => import('./country/' + country)}
+        fetch={country => import('../country/' + country)}
       >
         <h1>It works!</h1>
       </AddressRules>,
@@ -43,7 +43,7 @@ describe('AddressRules', () => {
     const instance = shallow(
       <AddressRules
         country={'XXX'}
-        fetch={country => import('./country/' + country)}
+        fetch={country => import('../country/' + country)}
       >
         <h1>It works!</h1>
       </AddressRules>,

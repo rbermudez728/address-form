@@ -1,12 +1,12 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import AddressContainer from './AddressContainer'
-import address from './__mocks__/newAddress'
-import usePostalCode from './country/__mocks__/usePostalCode'
-import postalCodeAutoCompleteAddress from './postalCodeAutoCompleteAddress'
-import PostalCodeGetter from './PostalCodeGetter'
+import AddressContainer from '../AddressContainer'
+import address from '../__mocks__/newAddress'
+import usePostalCode from '../country/__mocks__/usePostalCode'
+import postalCodeAutoCompleteAddress from '../postalCodeAutoCompleteAddress'
+import PostalCodeGetter from '../PostalCodeGetter'
 
-jest.mock('./postalCodeAutoCompleteAddress')
+jest.mock('../postalCodeAutoCompleteAddress')
 
 const descendToChild = wrapper =>
   wrapper

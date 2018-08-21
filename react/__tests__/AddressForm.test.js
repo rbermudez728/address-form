@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
-import AddressForm from './AddressForm'
-import address from './__mocks__/newAddress'
-import usePostalCode from './country/__mocks__/usePostalCode'
+import AddressForm from '../AddressForm'
+import address from '../__mocks__/newAddress'
+import usePostalCode from '../country/__mocks__/usePostalCode'
 
 describe('AddressForm', () => {
   it('renders without crashing', () => {
@@ -14,7 +14,7 @@ describe('AddressForm', () => {
         rules={usePostalCode}
         onChangeAddress={jest.fn()}
       />,
-      div
+      div,
     )
   })
 
@@ -25,7 +25,7 @@ describe('AddressForm', () => {
           address={address}
           rules={usePostalCode}
           onChangeAddress={jest.fn()}
-        />
+        />,
       )
       .toJSON()
 
