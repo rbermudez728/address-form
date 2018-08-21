@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { mount } from 'enzyme'
-import CountrySelector from './CountrySelector'
+import CountrySelector from '../CountrySelector'
 import renderer from 'react-test-renderer'
-import newAddress from './__mocks__/newAddress'
+import newAddress from '../__mocks__/newAddress'
 
 describe('CountrySelector', () => {
   const shipsTo = [
@@ -19,7 +19,7 @@ describe('CountrySelector', () => {
         shipsTo={shipsTo}
         onChangeAddress={jest.fn()}
       />,
-      div
+      div,
     )
   })
 
@@ -30,7 +30,7 @@ describe('CountrySelector', () => {
           address={newAddress}
           shipsTo={shipsTo}
           onChangeAddress={jest.fn()}
-        />
+        />,
       )
       .toJSON()
 
@@ -47,7 +47,7 @@ describe('CountrySelector', () => {
           }}
           shipsTo={shipsTo}
           onChangeAddress={jest.fn()}
-        />
+        />,
       )
       .toJSON()
 
@@ -64,7 +64,7 @@ describe('CountrySelector', () => {
           }}
           shipsTo={shipsTo}
           onChangeAddress={jest.fn()}
-        />
+        />,
       )
       .toJSON()
 
@@ -81,7 +81,7 @@ describe('CountrySelector', () => {
         }}
         shipsTo={shipsTo}
         onChangeAddress={handleChange}
-      />
+      />,
     )
 
     const event = { target: { value: 'USA' } }
@@ -104,7 +104,7 @@ describe('CountrySelector', () => {
         }}
         shipsTo={shipsTo}
         onChangeAddress={handleChange}
-      />
+      />,
     )
 
     const event = { target: { value: 'USA' } }

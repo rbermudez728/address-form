@@ -3,10 +3,10 @@ import {
   validateAddress,
   validateChangedFields,
   validateField,
-} from './validateAddress'
-import address from './__mocks__/newAddress'
+} from '../validateAddress'
+import address from '../__mocks__/newAddress'
 import reduce from 'lodash/reduce'
-import usePostalCode from './country/__mocks__/usePostalCode'
+import usePostalCode from '../country/__mocks__/usePostalCode'
 import {
   EEMPTY,
   EADDRESSTYPE,
@@ -14,7 +14,7 @@ import {
   ECOUNTRY,
   EGEOCOORDS,
   EPOSTALCODE,
-} from './constants.js'
+} from '../constants'
 
 describe('Address Validation:', () => {
   const baseRequiredFields = ['addressId', 'addressType', 'country']

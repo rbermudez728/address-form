@@ -1,9 +1,9 @@
-import postalCodeAutoCompleteAddress from './postalCodeAutoCompleteAddress'
-import newAddress from './__mocks__/newAddress'
-import usePostalCode from './country/__mocks__/usePostalCode'
+import postalCodeAutoCompleteAddress from '../postalCodeAutoCompleteAddress'
+import newAddress from '../__mocks__/newAddress'
+import usePostalCode from '../country/__mocks__/usePostalCode'
 
-jest.mock('./transforms/address')
-jest.mock('./postalCodeService')
+jest.mock('../transforms/address')
+jest.mock('../postalCodeService')
 
 describe('postalCodeAutoCompleteAddress()', () => {
   const cors = false

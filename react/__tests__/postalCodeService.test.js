@@ -1,4 +1,4 @@
-import { getAddress } from './postalCodeService'
+import { getAddress } from '../postalCodeService'
 
 jest.mock('axios', () => {
   return {

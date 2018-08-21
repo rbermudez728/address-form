@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { shallow } from 'enzyme'
-import PostalCodeGetter from './PostalCodeGetter'
-import address from './__mocks__/newAddress'
-import usePostalCode from './country/__mocks__/usePostalCode'
-import useOneLevel from './country/__mocks__/useOneLevel'
-import useTwoLevels from './country/__mocks__/useTwoLevels'
-import useThreeLevels from './country/__mocks__/useThreeLevels'
+import PostalCodeGetter from '../PostalCodeGetter'
+import address from '../__mocks__/newAddress'
+import usePostalCode from '../country/__mocks__/usePostalCode'
+import useOneLevel from '../country/__mocks__/useOneLevel'
+import useTwoLevels from '../country/__mocks__/useTwoLevels'
+import useThreeLevels from '../country/__mocks__/useThreeLevels'
 
 describe('PostalCodeGetter', () => {
   it('renders without crashing', () => {

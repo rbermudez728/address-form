@@ -1,13 +1,13 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
-import AddressSummary from './AddressSummary'
-import address from './__mocks__/addressWithoutValidation'
-import fbAddress from './__mocks__/facebookAddress'
-import usePostalCode from './country/__mocks__/usePostalCode'
-import displayBrazil from './country/__mocks__/displayBrazil'
-import displayUSA from './country/__mocks__/displayUSA'
-import displayNoSummary from './country/__mocks__/displayNoSummary'
+import AddressSummary from '../AddressSummary'
+import address from '../__mocks__/addressWithoutValidation'
+import fbAddress from '../__mocks__/facebookAddress'
+import usePostalCode from '../country/__mocks__/usePostalCode'
+import displayBrazil from '../country/__mocks__/displayBrazil'
+import displayUSA from '../country/__mocks__/displayUSA'
+import displayNoSummary from '../country/__mocks__/displayNoSummary'
 
 describe('AddressSummary', () => {
   it('renders without crashing', () => {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import AutoCompletedFields from './AutoCompletedFields'
-import newAddress from './__mocks__/newAddress'
-import usePostalCode from './country/__mocks__/usePostalCode'
+import AutoCompletedFields from '../AutoCompletedFields'
+import newAddress from '../__mocks__/newAddress'
+import usePostalCode from '../country/__mocks__/usePostalCode'
 
 describe('AutoCompletedFields', () => {
   const children = <span className="link-edit">Edit</span>
@@ -15,7 +15,7 @@ describe('AutoCompletedFields', () => {
         onChangeAddress={jest.fn()}
       >
         {children}
-      </AutoCompletedFields>
+      </AutoCompletedFields>,
     )
   })
 
@@ -27,7 +27,7 @@ describe('AutoCompletedFields', () => {
         onChangeAddress={jest.fn()}
       >
         {children}
-      </AutoCompletedFields>
+      </AutoCompletedFields>,
     )
     expect(wrapper.html()).toBe(null)
   })
@@ -47,7 +47,7 @@ describe('AutoCompletedFields', () => {
         onChangeAddress={jest.fn()}
       >
         {children}
-      </AutoCompletedFields>
+      </AutoCompletedFields>,
     )
     expect(wrapper.html()).toBe(null)
   })
@@ -73,7 +73,7 @@ describe('AutoCompletedFields', () => {
           onChangeAddress={onChangeAddress}
         >
           {children}
-        </AutoCompletedFields>
+        </AutoCompletedFields>,
       )
     })
 
@@ -104,12 +104,12 @@ describe('AutoCompletedFields', () => {
       expect(onChangeAddressArgument.state).toHaveProperty('value', state)
       expect(onChangeAddressArgument.state).toHaveProperty(
         'geolocationAutoCompleted',
-        undefined
+        undefined,
       )
       expect(onChangeAddressArgument.city).toHaveProperty('value', city)
       expect(onChangeAddressArgument.state).toHaveProperty(
         'postalCodeAutoCompleted',
-        undefined
+        undefined,
       )
     })
 
@@ -137,7 +137,7 @@ describe('AutoCompletedFields', () => {
         onChangeAddress={onChangeAddress}
       >
         {children}
-      </AutoCompletedFields>
+      </AutoCompletedFields>,
     )
 
     const AddressSummary = wrapper.find('AddressSummary')
@@ -165,7 +165,7 @@ describe('AutoCompletedFields', () => {
         onChangeAddress={onChangeAddress}
       >
         {children}
-      </AutoCompletedFields>
+      </AutoCompletedFields>,
     )
 
     const AddressSummary = wrapper.find('AddressSummary')

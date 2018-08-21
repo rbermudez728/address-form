@@ -1,9 +1,9 @@
 import React from 'react'
-import AddressSubmitter from './AddressSubmitter'
+import AddressSubmitter from '../AddressSubmitter'
 import { shallow, mount } from 'enzyme'
-import fbAddress from './__mocks__/facebookAddress'
-import { addValidation } from './transforms/address'
-import usaRules from './country/USA'
+import fbAddress from '../__mocks__/facebookAddress'
+import { addValidation } from '../transforms/address'
+import usaRules from '../country/USA'
 
 describe('AddressSubmitter', () => {
   let onSub, onCA, address, wrapper, Component
