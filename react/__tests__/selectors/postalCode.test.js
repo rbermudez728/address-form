@@ -2,10 +2,10 @@ import {
   getPostalCodeOptions,
   getLastLevelField,
   getLevelField,
-} from '../selectors/postalCode'
-import useOneLevel from '../country/__mocks__/useOneLevel'
-import useTwoLevels from '../country/__mocks__/useTwoLevels'
-import useThreeLevels from '../country/__mocks__/useThreeLevels'
+} from '../../selectors/postalCode'
+import useOneLevel from '../../country/__mocks__/useOneLevel'
+import useTwoLevels from '../../country/__mocks__/useTwoLevels'
+import useThreeLevels from '../../country/__mocks__/useThreeLevels'
 
 describe('Field Selectors', () => {
   describe('getPostalCodeOptions()', () => {

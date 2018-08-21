@@ -6,12 +6,12 @@ import {
   filterPostalCodeFields,
   filterAutoCompletedFields,
   isDefiningPostalCodeField,
-} from './fields'
-import { ONE_LEVEL, TWO_LEVELS, POSTAL_CODE } from '../constants'
+} from '../../selectors/fields'
+import { ONE_LEVEL, TWO_LEVELS, POSTAL_CODE } from '../../constants'
 import diff from 'lodash/difference'
-import useOneLevel from '../country/__mocks__/useOneLevel'
-import useTwoLevels from '../country/__mocks__/useTwoLevels'
-import useThreeLevels from '../country/__mocks__/useThreeLevels'
+import useOneLevel from '../../country/__mocks__/useOneLevel'
+import useTwoLevels from '../../country/__mocks__/useTwoLevels'
+import useThreeLevels from '../../country/__mocks__/useThreeLevels'
 
 describe('Field Selectors', () => {
   it('getField()', () => {
