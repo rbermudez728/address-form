@@ -74,13 +74,14 @@
     "address"
   ],
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/react/__tests__/setupTests.js",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "<rootDir>/es/",
       "<rootDir>/lib/",
       "<rootDir>/umd/",
-      "<rootDir>/src/"
+      "<rootDir>/src/",
+      "setupTests.js"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/es/",
