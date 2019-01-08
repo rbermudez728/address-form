@@ -23,6 +23,23 @@ class Input extends Component {
     const disabled = !!address[field.name].disabled
     const valid = address[field.name].valid
 
+    const canBeOmitted = !!address[field.name].canBeOmitted
+
+    if (canBeOmitted) {
+      return (
+        <Fragment>
+          {field.name}
+          <input type="text" value={address[field.name].value} />
+
+          Not applicable
+          <input
+            type="checkbox"
+            onChange={this.props.toggleNotApplicable}
+            value={address[field.name].notApplicable} />
+        </Fragment>
+      )
+    }
+
     if (field.name === 'postalCode') {
       return (
         <InputLabel field={field}>

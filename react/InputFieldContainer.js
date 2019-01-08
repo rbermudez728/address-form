@@ -51,6 +51,24 @@ class InputFieldContainer extends Component {
     }
   }
 
+  bindNotApplicable = () => {
+
+
+    return value => {
+
+      onChangeAddress({
+        ...clearedFields,
+        [field.name]: {
+          ...address[field.name],
+          postalCodeAutoCompleted: undefined,
+          geolocationAutoCompleted: undefined,
+          value: this.props.notApplicableValue,
+          notApplicable: value,
+        },
+      })
+    }
+  }
+
   bindOnBlur = () => {
     const { field, address, onChangeAddress } = this.props
     const value = address[field.name] ? address[field.name].value : ''
@@ -124,6 +142,10 @@ class InputFieldContainer extends Component {
         options={_options}
         onChange={this.bindOnChange()}
         onBlur={this.bindOnBlur()}
+        {...(address[field.name].canBeNotApplicable
+          ? { toggleNotApplicable: this.bindNotApplicable() }
+          : {}
+        )}
         inputRef={this.inputRef}
         shouldShowNumberKeyboard={shouldShowNumberKeyboard}
       />
