@@ -59,8 +59,6 @@ class AddressSummary extends Component {
 
               const hasNextField = index + 1 < summary.length &&
                 address[summary[index + 1].name]
-              const hasDifferentDelimiter = field.delimiterAfter !== '-'
-              const shouldShowDelimiter = hasNextField || hasDifferentDelimiter
 
               return address[field.name]
                 ? <span key={field.name}>
@@ -71,7 +69,7 @@ class AddressSummary extends Component {
                       </span>}
                   <span className={field.name}>{address[field.name]}</span>
                   {field.delimiterAfter &&
-                      shouldShowDelimiter &&
+                      hasNextField &&
                       <span className={field.name + '-delimiter-after'}>
                         {field.delimiterAfter}
                       </span>}
