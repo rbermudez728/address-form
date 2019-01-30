@@ -7,7 +7,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-street"
-    />
+    >
+      Street
+    </label>
     <input
       autoComplete="on"
       autoFocus={false}
@@ -29,7 +31,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-number"
-    />
+    >
+      Number
+    </label>
     <input
       autoComplete="on"
       autoFocus={false}
@@ -51,7 +55,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-complement"
-    />
+    >
+      Additional info (eg: apt 201)
+    </label>
     <input
       autoComplete="on"
       autoFocus={false}
@@ -63,7 +69,7 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
       name="complement"
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder={undefined}
+      placeholder="Optional"
       type="text"
       value=""
     />
@@ -73,7 +79,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-neighborhood"
-    />
+    >
+      Neighborhood
+    </label>
     <input
       autoComplete="on"
       autoFocus={false}
@@ -95,7 +103,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-city"
-    />
+    >
+      City
+    </label>
     <input
       autoComplete="on"
       autoFocus={false}
@@ -117,7 +127,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-state"
-    />
+    >
+      State
+    </label>
     <select
       className="input-mini"
       disabled={false}
@@ -160,7 +172,9 @@ exports[`AddressForm should omit fields that are used in to get the postal code 
   >
     <label
       htmlFor="ship-receiverName"
-    />
+    >
+      Receiver
+    </label>
     <input
       autoComplete="on"
       autoFocus={false}
